@@ -10,7 +10,8 @@ test('My First Playwright TypeScript Test', async ({page}) => {
 // search for a keywords
     await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testrs talk');
     await page.getByRole('combobox', { name: 'Search' }).press('Enter');
-// click on the playlists
+
+     // click on the playlists
     await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click()
     await page.waitForLoadState('networkidle');
 
