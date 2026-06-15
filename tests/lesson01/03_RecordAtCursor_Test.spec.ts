@@ -13,7 +13,7 @@ test('Record at Cursor Test', async ({page}) => {
 
 // click on the playlists
    await page.waitForLoadState('networkidle');
-   await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click()
+   await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click();
     
 
 //Validate web page title
