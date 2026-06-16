@@ -41,6 +41,8 @@ export default defineConfig({
       fullPage: true,
     },      // Always take screenshots
     video: 'on' // Always record video
+    // @ts-ignore
+    testIdAttribute : 'data-tab-item', // Use a custom test ID attribute
   
 
     
