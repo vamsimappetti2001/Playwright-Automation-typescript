@@ -17,5 +17,9 @@ test('Locators in Playwright', async ({page}) => {
     //await page.getByAltText("View vamsimappetti2001's full-sized avatar").click();
 
 // getbyTestId locator    
-    await page.getByTestId("repositories").click();    
+    //await page.getByTestId("repositories").first().click();
+    //await page.getByTestId("projects").first().click();
+    
+// get ByText locator
+      await page.getByText("sign up").click();   
 });
