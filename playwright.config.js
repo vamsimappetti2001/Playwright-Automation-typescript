@@ -40,9 +40,9 @@ export default defineConfig({
       mode: 'on',
       fullPage: true,
     },      // Always take screenshots
-    video: 'on' // Always record video
+    video: 'on', // Always record video
     // @ts-ignore
-    testIdAttribute : 'data-tab-item', // Use a custom test ID attribute
+    testIdAttribute : 'data-tab-item',  // Use a custom test ID attribute
   
 
     
