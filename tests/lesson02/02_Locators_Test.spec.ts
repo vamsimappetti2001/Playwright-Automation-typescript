@@ -11,6 +11,11 @@ test('Locators in Playwright', async ({page}) => {
     //await page.getByRole('link',{name:'Sign in'}).click();     
  
 // getbylabel locator
-    await page.getByLabel('Homepage', { exact : true}).first().click();
-        
+    //await page.getByLabel('Homepage', { exact : true}).first().click();
+
+//getbyAltText locator
+    //await page.getByAltText("View vamsimappetti2001's full-sized avatar").click();
+
+// getbyTestId locator    
+    await page.getByTestId("repositories").click();    
 });
