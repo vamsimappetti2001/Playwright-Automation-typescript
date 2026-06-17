@@ -31,10 +31,11 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
-    headless: false,  // kepp visible for better video recording
+    headless: false,
+    slowMo: 1000,  // keep visible for better video recording
     //storageState: 'auth/auth.json',
     launchOptions: {
-      slowMo: 250,
+      slowMo: 1000,
     }, // slower for better video capture
     screenshot: { 
       mode: 'on',
@@ -58,15 +59,15 @@ export default defineConfig({
        },
     },
 
-     {
-       name: 'firefox',
-       use: { ...devices['Desktop Firefox'] },
-     },
+     //{
+       //name: 'firefox',
+       //use: { ...devices['Desktop Firefox'] },
+     //},
 
-     {
-       name: 'webkit',
-       use: { ...devices['Desktop Safari'] },
-     },
+     //{
+       //name: 'webkit',
+       //use: { ...devices['Desktop Safari'] },
+     //},
 
     /* Test against mobile viewports. */
     // {
