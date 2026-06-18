@@ -6,10 +6,10 @@ test('Handiling Iframes,Drag and Drop element',  async ({ page}) =>{
 await page.goto('https://www.google.com/search?q=playwright+by+testers+talk'); 
 
 // left button click
-await page.getByRole('link',{name :'Playwright by Testers Talk'}).first().click({ button :'left' })
+//await page.getByRole('link',{name :'Playwright by Testers Talk'}).first().click({ button :'left' })
 
 // middle button click
-await page.getByRole('link',{name :'Playwright by Testers Talk'}).first().click({ button :'middle' })
+//await page.getByRole('link',{name :'Playwright by Testers Talk'}).first().click({ button :'middle' })
 
 // Right button click
 await page.getByRole('link',{name :'Playwright by Testers Talk'}).first().click({ button :'right' })
