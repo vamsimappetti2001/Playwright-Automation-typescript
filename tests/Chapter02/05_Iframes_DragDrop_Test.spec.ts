@@ -1,7 +1,7 @@
 // import playwright module
 import {test, expect} from '@playwright/test'
 //write a test case
-test('', async ({ page}) =>{
+test('Handiling Iframes,Drag and Drop element',  async ({ page}) =>{
 // go to url
 await page.goto('https://jqueryui.com/droppable/'); 
 const iframe = page.frameLocator('[class="demo-frame"]'); 
