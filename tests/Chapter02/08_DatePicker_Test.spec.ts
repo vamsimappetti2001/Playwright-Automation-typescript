@@ -21,8 +21,9 @@ import {test, expect } from '@playwright/test'
  await iframe.locator('text="15"').click();
 
 //Selecting Future Date
- await iframe.locator('[id="datepicker"]').click();
+ await iframe.locator('[id="datepicker"]'). click();
  await iframe.locator('[title="Next"]').click();
  await iframe.locator('text="15"').click();
+
 
 });
