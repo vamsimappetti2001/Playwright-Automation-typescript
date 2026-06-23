@@ -1,6 +1,6 @@
 // import playwright module
 import{test, expect}from '@playwright/test'
-
+ 
 //write a test case 
 test('Asserations in playwright', async({ page }) =>{
     //Go to url
