@@ -9,7 +9,7 @@ test('My First Playwright TypeScript Test', async ({page}) => {
     await page.goto('https://www.google.com/');
 
 // search for a keywords
-    await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testrs talk');
+    await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testers talk');
     await page.getByRole('combobox', { name: 'Search' }).press('Enter');
 
 // click on the playlists
