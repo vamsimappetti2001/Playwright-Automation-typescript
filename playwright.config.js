@@ -1,4 +1,5 @@
 // @ts-check
+/// <reference types="node" />
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -25,69 +26,32 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  timeout: 60000,
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on',
     headless: false,
-    slowMo: 1000,  // keep visible for better video recording
-    //storageState: 'auth/auth.json',
+    slowMo: 1000,
     launchOptions: {
       slowMo: 1000,
-    }, // slower for better video capture
-    screenshot: { 
+    },
+    screenshot: {
       mode: 'on',
       fullPage: true,
-    },      // Always take screenshots
-    video: 'on', // Always record video
-    // @ts-ignore
-    testIdAttribute : 'data-tab-item',  // Use a custom test ID attribute
-  
-
-    
+    },
+    video: 'on',
+    testIdAttribute: 'data-tab-item',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chrome',
-      use: { ...devices['Desktop Chrome'],
+      use: {
+        ...devices['Desktop Chrome'],
         channel: 'chrome',
         headless: false,
-       },
+      },
     },
-
-     //{
-       //name: 'firefox',
-       //use: { ...devices['Desktop Firefox'] },
-     //},
-
-     //{
-       //name: 'webkit',
-       //use: { ...devices['Desktop Safari'] },
-     //},
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-       //name: 'Google Chrome',
-       //use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-      //,
   ],
 
   /* Run your local dev server before starting the tests */
