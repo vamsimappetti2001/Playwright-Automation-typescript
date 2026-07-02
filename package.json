@@ -3,16 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dashboard:server": "node dashboard-server.js",
+    "dashboard:ui": "cd dashboard-ui && npm start",
+    "dashboard": "concurrently \"npm run dashboard:server\" \"npm run dashboard:ui\""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.3"
+    "@types/node": "^25.9.3",
+    "concurrently": "^10.0.3"
   },
   "dependencies": {
-    "2captcha-nodejs": "^0.0.3"
+    "2captcha-nodejs": "^0.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
   }
 }
