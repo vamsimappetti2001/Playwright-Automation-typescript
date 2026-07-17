@@ -7,7 +7,7 @@ test('handling Alerts popups in playwright', async ({page}) => {
     await page.goto('https://www.selenium.dev/documentation/webdriver/interactions/alerts/')
 
     page.once('dialog', dialog =>{
-        console.log(`Alert Type : ${dialog.type()}`);
+        console.log(`Alert Type   : ${dialog.type()}`);
         dialog.accept();
         console.log(`Alert message is : ${dialog.message()}`);
         
