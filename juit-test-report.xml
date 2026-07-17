@@ -1,0 +1,15 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="15.762521999999999">
+<testsuite name="Chapter01\01_using_github_website.spec.ts" timestamp="2026-07-17T10:23:00.930Z" hostname="chrome" tests="1" failures="0" skipped="0" time="13.028" errors="0">
+<testcase name="test" classname="Chapter01\01_using_github_website.spec.ts" time="13.028">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Chapter01-01_using_github_website-test-chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\Chapter01-01_using_github_website-test-chrome\video.webm]]
+
+[[ATTACHMENT|test-results\Chapter01-01_using_github_website-test-chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
