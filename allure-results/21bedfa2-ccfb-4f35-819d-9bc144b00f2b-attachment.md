@@ -1,0 +1,900 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Chapter04\04_TestReport.spec.ts >> Regressiontesting >> Test 4
+- Location: tests\Chapter04\04_TestReport.spec.ts:67:9
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('link', { name: '#1 Playwright Tutorial Full type  ' })
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByRole('link', { name: '#1 Playwright Tutorial Full type  ' })
+
+```
+
+```yaml
+- banner:
+  - button "Guide"
+  - link "YouTube Home":
+    - /url: /
+  - text: IN
+  - button "Skip navigation"
+  - search:
+    - combobox "Search" [expanded]
+    - button "Search"
+  - button "Search with your voice"
+  - tooltip "tooltip"
+  - button "Settings"
+  - link "Sign in":
+    - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fplaylist%253Flist%253DPLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&hl=en&ec=65620
+- navigation:
+  - link "Home":
+    - /url: /
+  - link "Shorts":
+    - /url: /shorts/
+  - link "Subscriptions":
+    - /url: /feed/subscriptions
+  - link "You":
+    - /url: /feed/you
+- main:
+  - img "Play all"
+  - button "Play all"
+  - heading "Playwright by Testers Talk ✅" [level=1]
+  - group:
+    - button "by Testers Talk":
+      - link "by Testers Talk":
+        - /url: /@testerstalk
+  - group: Playlist 82 videos 37,080 views
+  - text: "Playwright by Testers Talk Playwright tutorial playwright automation playwright automation tutorial playwright vs cypress playwright vs selenium playwright with javascript playwright with java playwright with typescript playwright with python #playwright #tutorial #automationtesting #testerstalk #testautomation #testing #sdet #softwaretesting #qa #playwrighttutorial"
+  - button "Description. Playwright by Testers Talk Playwright tutorial playwright au...tap for more.": ...more
+  - link "Play all":
+    - /url: /watch?v=2poXBtifpzA&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&pp=iAQB
+  - button "Save playlist"
+  - button "Share"
+  - button "More actions"
+  - heading "#1 Playwright Tutorial Full Course 2026 | Playwright Testing Tutorial" [level=3]:
+    - link "#1 Playwright Tutorial Full Course 2026 | Playwright Testing Tutorial 6 hours, 55 minutes":
+      - /url: /watch?v=2poXBtifpzA&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=1&pp=iAQB
+      - text: "#1 Playwright Tutorial Full Course 2026 | Playwright Testing Tutorial"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 175K views 2 years ago
+  - button "More actions"
+  - heading "#2 Playwright API Testing Tutorial Crash Course 2024" [level=3]:
+    - link "#2 Playwright API Testing Tutorial Crash Course 2024 1 hour, 59 minutes":
+      - /url: /watch?v=lM-lqPun9P8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=2&pp=iAQB
+      - text: "#2 Playwright API Testing Tutorial Crash Course 2024"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 52K views 2 years ago
+  - button "More actions"
+  - heading "Testing Microsoft D365 CRM App. with Playwright" [level=3]:
+    - link "Testing Microsoft D365 CRM App. with Playwright 13 minutes, 48 seconds":
+      - /url: /watch?v=WwovRRp0f4o&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=3&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: Testing Microsoft D365 CRM App. with Playwright
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 10K views 2 years ago
+  - button "More actions"
+  - heading "#3 Playwright with Azure DevOps Pipeline Tutorial Complete Guide" [level=3]:
+    - link "#3 Playwright with Azure DevOps Pipeline Tutorial Complete Guide 52 minutes":
+      - /url: /watch?v=Exx2M5Pz06g&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=4&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "#3 Playwright with Azure DevOps Pipeline Tutorial Complete Guide"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 26K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #1 Chapter01 Introduction" [level=3]':
+    - 'link "Playwright #1 Chapter01 Introduction 2 minutes, 40 seconds"':
+      - /url: /watch?v=4G4BPFdqIEQ&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=5&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #1 Chapter01 Introduction"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #2 What is Playwright? Advantages & Limitations" [level=3]':
+    - 'link "Playwright #2 What is Playwright? Advantages & Limitations 6 minutes, 17 seconds"':
+      - /url: /watch?v=dMiDYASMlX8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=6&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #2 What is Playwright? Advantages & Limitations"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #3 Playwright Architecture in Detail" [level=3]':
+    - 'link "Playwright #3 Playwright Architecture in Detail 5 minutes, 49 seconds"':
+      - /url: /watch?v=f4y1pJdkdNA&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=7&pp=iAQB
+      - text: "Playwright #3 Playwright Architecture in Detail"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #4 Playwright Vs Cypress Automation Tools" [level=3]':
+    - 'link "Playwright #4 Playwright Vs Cypress Automation Tools 3 minutes, 11 seconds"':
+      - /url: /watch?v=nRzk4Zj_Bps&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=8&pp=iAQB
+      - text: "Playwright #4 Playwright Vs Cypress Automation Tools"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.9K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #5 Playwright Vs Selenium WebDriver" [level=3]':
+    - 'link "Playwright #5 Playwright Vs Selenium WebDriver 5 minutes, 13 seconds"':
+      - /url: /watch?v=p1CIYTyKOlc&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=9&pp=iAQB
+      - text: "Playwright #5 Playwright Vs Selenium WebDriver"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #6 Software Requirement" [level=3]':
+    - 'link "Playwright #6 Software Requirement 51 seconds"':
+      - /url: /watch?v=Ohn9V-cr5Rw&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=10&pp=iAQB
+      - text: "Playwright #6 Software Requirement"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.6K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #7 Install NodeJS & Visual Studio Code" [level=3]':
+    - 'link "Playwright #7 Install NodeJS & Visual Studio Code 4 minutes, 41 seconds"':
+      - /url: /watch?v=nGL_aRZxpOo&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=11&pp=iAQB
+      - text: "Playwright #7 Install NodeJS & Visual Studio Code"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #8 Install Playwright Using Visual Studio Code" [level=3]':
+    - 'link "Playwright #8 Install Playwright Using Visual Studio Code 4 minutes, 3 seconds"':
+      - /url: /watch?v=RgS63OwJiPE&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=12&pp=iAQB
+      - text: "Playwright #8 Install Playwright Using Visual Studio Code"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #9 Playwright Folder Structure" [level=3]':
+    - 'link "Playwright #9 Playwright Folder Structure 3 minutes, 41 seconds"':
+      - /url: /watch?v=wC_JVXy6EK0&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=13&pp=iAQB
+      - text: "Playwright #9 Playwright Folder Structure"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 6.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #10 Run Playwright Test & Test Explorer" [level=3]':
+    - 'link "Playwright #10 Run Playwright Test & Test Explorer 7 minutes, 37 seconds"':
+      - /url: /watch?v=w9T50WOaHe8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=14&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #10 Run Playwright Test & Test Explorer"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #11 Run Test on Google Chrome & Microsoft Edge Browser" [level=3]':
+    - 'link "Playwright #11 Run Test on Google Chrome & Microsoft Edge Browser 5 minutes, 14 seconds"':
+      - /url: /watch?v=aI0KqyTGogI&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=15&pp=iAQB
+      - text: "Playwright #11 Run Test on Google Chrome & Microsoft Edge Browser"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #12 Record First Playwright Test & Playwright HTML Test Report" [level=3]':
+    - 'link "Playwright #12 Record First Playwright Test & Playwright HTML Test Report 9 minutes, 43 seconds"':
+      - /url: /watch?v=QqkNNyN0Sqk&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=16&pp=iAQB
+      - text: "Playwright #12 Record First Playwright Test & Playwright HTML Test Report"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.6K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #13 Record at Cursor in Playwright Test Automation" [level=3]':
+    - 'link "Playwright #13 Record at Cursor in Playwright Test Automation 8 minutes, 3 seconds"':
+      - /url: /watch?v=o5AitDULEWk&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=17&pp=iAQB
+      - text: "Playwright #13 Record at Cursor in Playwright Test Automation"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #14 Commonly Used Terminologies in Playwright Automation" [level=3]':
+    - 'link "Playwright #14 Commonly Used Terminologies in Playwright Automation 3 minutes, 4 seconds"':
+      - /url: /watch?v=Z6qsZsz73fU&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=18&pp=iAQB
+      - text: "Playwright #14 Commonly Used Terminologies in Playwright Automation"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #15 Write First Playwright Test & Pick Locator" [level=3]':
+    - 'link "Playwright #15 Write First Playwright Test & Pick Locator 14 minutes, 41 seconds"':
+      - /url: /watch?v=khtHycQJ5Ug&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=19&pp=iAQB
+      - text: "Playwright #15 Write First Playwright Test & Pick Locator"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #16 Install Playwright Automation Tool Using CMD" [level=3]':
+    - 'link "Playwright #16 Install Playwright Automation Tool Using CMD 3 minutes, 52 seconds"':
+      - /url: /watch?v=cu6DHrLI_1c&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=20&pp=iAQB
+      - text: "Playwright #16 Install Playwright Automation Tool Using CMD"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #17 Run Playwright Test in Headless & Test Report" [level=3]':
+    - 'link "Playwright #17 Run Playwright Test in Headless & Test Report 6 minutes, 4 seconds"':
+      - /url: /watch?v=plUOGycfsGs&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=21&pp=iAQB
+      - text: "Playwright #17 Run Playwright Test in Headless & Test Report"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #18 Run Playwright Test in Headed Mode" [level=3]':
+    - 'link "Playwright #18 Run Playwright Test in Headed Mode 5 minutes, 16 seconds"':
+      - /url: /watch?v=4NgnFqdEn_I&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=22&pp=iAQB
+      - text: "Playwright #18 Run Playwright Test in Headed Mode"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #19 Run Playwright Specific Spec File" [level=3]':
+    - 'link "Playwright #19 Run Playwright Specific Spec File 5 minutes, 45 seconds"':
+      - /url: /watch?v=3YK035c80b0&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=23&pp=iAQB
+      - text: "Playwright #19 Run Playwright Specific Spec File"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #20 Run Playwright Test on Different Browsers | Chromium | WebKit" [level=3]':
+    - 'link "Playwright #20 Run Playwright Test on Different Browsers | Chromium | WebKit 3 minutes, 42 seconds"':
+      - /url: /watch?v=ZvmPChmuTEc&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=24&pp=iAQB
+      - text: "Playwright #20 Run Playwright Test on Different Browsers | Chromium | WebKit"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.9K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #21 Record Playwright Test Using Codegen" [level=3]':
+    - 'link "Playwright #21 Record Playwright Test Using Codegen 10 minutes, 14 seconds"':
+      - /url: /watch?v=8LhEGsirbNM&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=25&pp=iAQB
+      - text: "Playwright #21 Record Playwright Test Using Codegen"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #22 Chapter02 Introduction" [level=3]':
+    - 'link "Playwright #22 Chapter02 Introduction 1 minute, 42 seconds"':
+      - /url: /watch?v=hDku64NFeE4&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=26&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #22 Chapter02 Introduction"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 785 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #23 Complete Playwright Locators Tutorial" [level=3]':
+    - 'link "Playwright #23 Complete Playwright Locators Tutorial 30 minutes"':
+      - /url: /watch?v=05joHjdCJ2I&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=27&pp=iAQB
+      - text: "Playwright #23 Complete Playwright Locators Tutorial"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.9K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #24 Take Screenshot in Playwright" [level=3]':
+    - 'link "Playwright #24 Take Screenshot in Playwright 8 minutes, 52 seconds"':
+      - /url: /watch?v=XmIkVR_tkUI&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=28&pp=iAQB
+      - text: "Playwright #24 Take Screenshot in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #25 Add Screenshot into Playwright Report When Test is Failed" [level=3]':
+    - 'link "Playwright #25 Add Screenshot into Playwright Report When Test is Failed 3 minutes, 57 seconds"':
+      - /url: /watch?v=u3umvYYjkuM&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=29&pp=iAQB
+      - text: "Playwright #25 Add Screenshot into Playwright Report When Test is Failed"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.9K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #26 Hooks in Playwright | beforeEach beforeAll afterEach afterAll" [level=3]':
+    - 'link "Playwright #26 Hooks in Playwright | beforeEach beforeAll afterEach afterAll 11 minutes, 8 seconds"':
+      - /url: /watch?v=pKXvi-Ssl8k&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=30&pp=iAQB
+      - text: "Playwright #26 Hooks in Playwright | beforeEach beforeAll afterEach afterAll"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #27 Select Dropdown List & Verify Dropdown Value" [level=3]':
+    - 'link "Playwright #27 Select Dropdown List & Verify Dropdown Value 9 minutes, 6 seconds"':
+      - /url: /watch?v=eYwVRPJAveg&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=31&pp=iAQB
+      - text: "Playwright #27 Select Dropdown List & Verify Dropdown Value"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 6.2K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #28 Handle Iframes & Drag and Drop in Playwright" [level=3]':
+    - 'link "Playwright #28 Handle Iframes & Drag and Drop in Playwright 7 minutes, 44 seconds"':
+      - /url: /watch?v=HSZIn1jfU08&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=32&pp=iAQB
+      - text: "Playwright #28 Handle Iframes & Drag and Drop in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.5K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #29 Mouse Actions & Mouse Hover in Playwright" [level=3]':
+    - 'link "Playwright #29 Mouse Actions & Mouse Hover in Playwright 11 minutes, 12 seconds"':
+      - /url: /watch?v=RszZ4dxOFoc&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=33&pp=iAQB
+      - text: "Playwright #29 Mouse Actions & Mouse Hover in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.6K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #30 Keyboard Actions in Playwright | Press TAB ENTER DELETE CONTROL+A etc" [level=3]':
+    - 'link "Playwright #30 Keyboard Actions in Playwright | Press TAB ENTER DELETE CONTROL+A etc 11 minutes, 59 seconds"':
+      - /url: /watch?v=rwyk78OwZDs&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=34&pp=iAQB
+      - text: "Playwright #30 Keyboard Actions in Playwright | Press TAB ENTER DELETE CONTROL+A etc"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #31 Date Picker in Playwright Automation | Select Date" [level=3]':
+    - 'link "Playwright #31 Date Picker in Playwright Automation | Select Date 18 minutes"':
+      - /url: /watch?v=CgXC7mFpv-0&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=35&pp=iAQB
+      - text: "Playwright #31 Date Picker in Playwright Automation | Select Date"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #32 Assertions in Playwright" [level=3]':
+    - 'link "Playwright #32 Assertions in Playwright 19 minutes"':
+      - /url: /watch?v=VYCvMGHVHoM&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=36&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #32 Assertions in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.5K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #33 Soft Assertion in Playwright Test Automation" [level=3]':
+    - 'link "Playwright #33 Soft Assertion in Playwright Test Automation 3 minutes, 52 seconds"':
+      - /url: /watch?v=Sgb_m9IQ2nw&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=37&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #33 Soft Assertion in Playwright Test Automation"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 972 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #34 Watch Mode in Playwright & Playwright Test Runner" [level=3]':
+    - 'link "Playwright #34 Watch Mode in Playwright & Playwright Test Runner 4 minutes, 14 seconds"':
+      - /url: /watch?v=qJYk5uCTQAI&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=38&pp=iAQB
+      - text: "Playwright #34 Watch Mode in Playwright & Playwright Test Runner"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 890 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #35 Trace Viewer | Logs Console Network Source Errors & Attachments" [level=3]':
+    - 'link "Playwright #35 Trace Viewer | Logs Console Network Source Errors & Attachments 7 minutes, 39 seconds"':
+      - /url: /watch?v=rvXzSuy3JGk&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=39&pp=iAQB
+      - text: "Playwright #35 Trace Viewer | Logs Console Network Source Errors & Attachments"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #36 Chapter03 Introduction" [level=3]':
+    - 'link "Playwright #36 Chapter03 Introduction 1 minute, 29 seconds"':
+      - /url: /watch?v=7dXlekZTCQQ&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=40&pp=iAQB
+      - text: "Playwright #36 Chapter03 Introduction"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 459 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #37 Skip Test & Run ONLY Selected Tests" [level=3]':
+    - 'link "Playwright #37 Skip Test & Run ONLY Selected Tests 5 minutes, 22 seconds"':
+      - /url: /watch?v=vtxHBcZnDAA&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=41&pp=iAQB
+      - text: "Playwright #37 Skip Test & Run ONLY Selected Tests"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #38 Grouping Tests in Playright" [level=3]':
+    - 'link "Playwright #38 Grouping Tests in Playright 5 minutes, 8 seconds"':
+      - /url: /watch?v=VRLzfS1NLLk&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=42&pp=iAQB
+      - text: "Playwright #38 Grouping Tests in Playright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #39 Tag Test in Playwright" [level=3]':
+    - 'link "Playwright #39 Tag Test in Playwright 5 minutes, 43 seconds"':
+      - /url: /watch?v=bRaRQR9PPp4&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=43&pp=iAQB
+      - text: "Playwright #39 Tag Test in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 728 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #40 Repeat Test in Playwright" [level=3]':
+    - 'link "Playwright #40 Repeat Test in Playwright 3 minutes, 19 seconds"':
+      - /url: /watch?v=RgUzDgnTfCA&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=44&pp=iAQB
+      - text: "Playwright #40 Repeat Test in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #41 Auto Retry when Test Failed in Playwright" [level=3]':
+    - 'link "Playwright #41 Auto Retry when Test Failed in Playwright 6 minutes, 34 seconds"':
+      - /url: /watch?v=r3TCpZs9Cn8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=45&pp=iAQB
+      - text: "Playwright #41 Auto Retry when Test Failed in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #42 Parallel Testing in Playwright" [level=3]':
+    - 'link "Playwright #42 Parallel Testing in Playwright 5 minutes, 4 seconds"':
+      - /url: /watch?v=3BDHAnTFa9A&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=46&pp=iAQB
+      - text: "Playwright #42 Parallel Testing in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #43 Parameterize Tests in Playwright" [level=3]':
+    - 'link "Playwright #43 Parameterize Tests in Playwright 9 minutes, 33 seconds"':
+      - /url: /watch?v=gkx0Zq-S9vs&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=47&pp=iAQB
+      - text: "Playwright #43 Parameterize Tests in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #44 Visual Comparison in Playwright | Visual Testing Images Comparison" [level=3]':
+    - 'link "Playwright #44 Visual Comparison in Playwright | Visual Testing Images Comparison 9 minutes, 57 seconds"':
+      - /url: /watch?v=ELUyoQKAXpE&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=48&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #44 Visual Comparison in Playwright | Visual Testing Images Comparison"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #45 Chapter04 Introduction" [level=3]':
+    - 'link "Playwright #45 Chapter04 Introduction 1 minute, 12 seconds"':
+      - /url: /watch?v=TiwqpXYwtfg&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=49&pp=iAQB
+      - text: "Playwright #45 Chapter04 Introduction"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 612 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #46 Env Configurations in Playwright" [level=3]':
+    - 'link "Playwright #46 Env Configurations in Playwright 11 minutes, 23 seconds"':
+      - /url: /watch?v=Zq11KhZd8jU&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=50&pp=iAQB
+      - text: "Playwright #46 Env Configurations in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #47 Data Driven Testing using JSON File in Playwright" [level=3]':
+    - 'link "Playwright #47 Data Driven Testing using JSON File in Playwright 11 minutes, 27 seconds"':
+      - /url: /watch?v=pCiWGYzJfSY&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=51&pp=iAQB
+      - text: "Playwright #47 Data Driven Testing using JSON File in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 6.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #48 Data Driven Testing using CSV File in Playwright" [level=3]':
+    - 'link "Playwright #48 Data Driven Testing using CSV File in Playwright 13 minutes, 41 seconds"':
+      - /url: /watch?v=AHaAO7AY_Nw&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=52&pp=iAQB
+      - text: "Playwright #48 Data Driven Testing using CSV File in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 9.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #49 Run Playwright Tests on Different Environments QA STAGE DEV & PROD" [level=3]':
+    - 'link "Playwright #49 Run Playwright Tests on Different Environments QA STAGE DEV & PROD 13 minutes, 30 seconds"':
+      - /url: /watch?v=vi0xxnaVeos&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=53&pp=iAQB
+      - text: "Playwright #49 Run Playwright Tests on Different Environments QA STAGE DEV & PROD"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #50 Page Object Model in Playwright" [level=3]':
+    - 'link "Playwright #50 Page Object Model in Playwright 30 minutes"':
+      - /url: /watch?v=T1-BxVD34bE&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=54&pp=iAQB
+      - text: "Playwright #50 Page Object Model in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.2K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #51 Video Recording in Playwright" [level=3]':
+    - 'link "Playwright #51 Video Recording in Playwright 8 minutes, 37 seconds"':
+      - /url: /watch?v=cjEabtuKQG8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=55&pp=iAQB
+      - text: "Playwright #51 Video Recording in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.7K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #52 Maximize Full Screen Browser in Playwright" [level=3]':
+    - 'link "Playwright #52 Maximize Full Screen Browser in Playwright 3 minutes, 15 seconds"':
+      - /url: /watch?v=SQisY9urSMQ&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=56&pp=iAQB
+      - text: "Playwright #52 Maximize Full Screen Browser in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 5.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #53 Chapter05 Introduction" [level=3]':
+    - 'link "Playwright API Testing #53 Chapter05 Introduction 2 minutes, 1 second"':
+      - /url: /watch?v=btTuMik9c_c&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=57&pp=iAQB
+      - text: "Playwright API Testing #53 Chapter05 Introduction"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #54 Setup Playwright API Testing" [level=3]':
+    - 'link "Playwright API Testing #54 Setup Playwright API Testing 4 minutes, 21 seconds"':
+      - /url: /watch?v=-hBnQVtfrqk&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=58&pp=iAQB
+      - text: "Playwright API Testing #54 Setup Playwright API Testing"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.5K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #55 POST API Request using Static Request Body" [level=3]':
+    - 'link "Playwright API Testing #55 POST API Request using Static Request Body 9 minutes, 9 seconds"':
+      - /url: /watch?v=yfQXwALSWxQ&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=59&pp=iAQB
+      - text: "Playwright API Testing #55 POST API Request using Static Request Body"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.8K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #56 Assertion | Validate Status Code | JSON API Response" [level=3]':
+    - 'link "Playwright API Testing #56 Assertion | Validate Status Code | JSON API Response 10 minutes, 11 seconds"':
+      - /url: /watch?v=b_z5o9Easg8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=60&pp=iAQB
+      - text: "Playwright API Testing #56 Assertion | Validate Status Code | JSON API Response"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.5K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #57 POST API Request using Static JSON File" [level=3]':
+    - 'link "Playwright API Testing #57 POST API Request using Static JSON File 5 minutes, 42 seconds"':
+      - /url: /watch?v=GRSTmxTrPSk&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=61&pp=iAQB
+      - text: "Playwright API Testing #57 POST API Request using Static JSON File"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #58 POST API Request using Dynamic Request Body" [level=3]':
+    - 'link "Playwright API Testing #58 POST API Request using Dynamic Request Body 11 minutes, 39 seconds"':
+      - /url: /watch?v=XdeuRTUrdbU&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=62&pp=iAQB
+      - text: "Playwright API Testing #58 POST API Request using Dynamic Request Body"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.9K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #59 POST API Request using Dynamic JSON File" [level=3]':
+    - 'link "Playwright API Testing #59 POST API Request using Dynamic JSON File 12 minutes, 34 seconds"':
+      - /url: /watch?v=QG9Lk95a5Yw&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=63&pp=iAQB
+      - text: "Playwright API Testing #59 POST API Request using Dynamic JSON File"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #60 GET API Request in Playwright" [level=3]':
+    - 'link "Playwright API Testing #60 GET API Request in Playwright 8 minutes, 45 seconds"':
+      - /url: /watch?v=R1dOOKXp5x8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=64&pp=iAQB
+      - text: "Playwright API Testing #60 GET API Request in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #61 Query Parameters in Playwright" [level=3]':
+    - 'link "Playwright API Testing #61 Query Parameters in Playwright 7 minutes, 28 seconds"':
+      - /url: /watch?v=cJ6pTKk0Zc8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=65&pp=iAQB
+      - text: "Playwright API Testing #61 Query Parameters in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.1K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #62 PUT API Request | API Chaining" [level=3]':
+    - 'link "Playwright API Testing #62 PUT API Request | API Chaining 18 minutes"':
+      - /url: /watch?v=E8XYmzgqPpU&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=66&pp=iAQB
+      - text: "Playwright API Testing #62 PUT API Request | API Chaining"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 848 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #63 PATCH API Request in Playwright" [level=3]':
+    - 'link "Playwright API Testing #63 PATCH API Request in Playwright 9 minutes, 12 seconds"':
+      - /url: /watch?v=3VFgU2i2_t0&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=67&pp=iAQB
+      - text: "Playwright API Testing #63 PATCH API Request in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 491 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright API Testing #64 DELETE API Request in Playwright" [level=3]':
+    - 'link "Playwright API Testing #64 DELETE API Request in Playwright 9 minutes, 6 seconds"':
+      - /url: /watch?v=0IsHFiELmV8&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=68&pp=iAQB
+      - text: "Playwright API Testing #64 DELETE API Request in Playwright"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 662 views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #65 Allure Report with Playwright | Screenshot | Videos | Traces" [level=3]':
+    - 'link "Playwright #65 Allure Report with Playwright | Screenshot | Videos | Traces 11 minutes, 26 seconds"':
+      - /url: /watch?v=TY1ANl0mzPg&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=69&pp=iAQB
+      - text: "Playwright #65 Allure Report with Playwright | Screenshot | Videos | Traces"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.9K views 2 years ago
+  - button "More actions"
+  - heading "#66 Create Repository in Azure DevOps" [level=3]:
+    - link "#66 Create Repository in Azure DevOps 6 minutes, 59 seconds":
+      - /url: /watch?v=5XdGybA392I&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=70&pp=iAQB
+      - text: "#66 Create Repository in Azure DevOps"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.3K views 2 years ago
+  - button "More actions"
+  - heading "#67 Create Pipeline in Azure DevOps" [level=3]:
+    - link "#67 Create Pipeline in Azure DevOps 12 minutes, 10 seconds":
+      - /url: /watch?v=CZgAvpF3_fI&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=71&pp=iAQB
+      - text: "#67 Create Pipeline in Azure DevOps"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.2K views 2 years ago
+  - button "More actions"
+  - heading "#68 Publish Pipeline Artifacts in Azure DevOps" [level=3]:
+    - link "#68 Publish Pipeline Artifacts in Azure DevOps 7 minutes, 19 seconds":
+      - /url: /watch?v=zc5I4tbsaPo&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=72&pp=iAQB
+      - text: "#68 Publish Pipeline Artifacts in Azure DevOps"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.5K views 2 years ago
+  - button "More actions"
+  - heading "#69 Publish Test Results in Azure DevOps Pipeline" [level=3]:
+    - link "#69 Publish Test Results in Azure DevOps Pipeline 6 minutes, 27 seconds":
+      - /url: /watch?v=ihmZyYDMaeA&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=73&pp=iAQB
+      - text: "#69 Publish Test Results in Azure DevOps Pipeline"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 2.3K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #70 Create Azure DevOps Pipeline without YAML File" [level=3]':
+    - 'link "Playwright #70 Create Azure DevOps Pipeline without YAML File 8 minutes, 11 seconds"':
+      - /url: /watch?v=A10_t3Ht0kg&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=74&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: "Playwright #70 Create Azure DevOps Pipeline without YAML File"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #71 Azure DevOps Pipeline - Adding Playwright Report" [level=3]':
+    - 'link "Playwright #71 Azure DevOps Pipeline - Adding Playwright Report 4 minutes, 55 seconds"':
+      - /url: /watch?v=Rz9rSn1b73E&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=75&pp=iAQB
+      - text: "Playwright #71 Azure DevOps Pipeline - Adding Playwright Report"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.5K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #72 Azure DevOps Pipeline - Publish Test Results" [level=3]':
+    - 'link "Playwright #72 Azure DevOps Pipeline - Publish Test Results 6 minutes, 31 seconds"':
+      - /url: /watch?v=g6yczRT_CgM&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=76&pp=iAQB
+      - text: "Playwright #72 Azure DevOps Pipeline - Publish Test Results"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 4K views 2 years ago
+  - button "More actions"
+  - 'heading "Playwright #73 How to Run Only Changed Spec or Test Files in Playwright Since Last GIT Commit" [level=3]':
+    - 'link "Playwright #73 How to Run Only Changed Spec or Test Files in Playwright Since Last GIT Commit 10 minutes, 23 seconds"':
+      - /url: /watch?v=3w_FS4N4Ee4&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=77&pp=iAQB
+      - text: "Playwright #73 How to Run Only Changed Spec or Test Files in Playwright Since Last GIT Commit"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 861 views 1 year ago
+  - button "More actions"
+  - 'heading "Playwright #74 How to Run Only Failed Tests in Playwright Automation Framework" [level=3]':
+    - 'link "Playwright #74 How to Run Only Failed Tests in Playwright Automation Framework 8 minutes, 28 seconds"':
+      - /url: /watch?v=Ojgt8m5UWvM&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=78&pp=iAQB
+      - text: "Playwright #74 How to Run Only Failed Tests in Playwright Automation Framework"
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.2K views 1 year ago
+  - button "More actions"
+  - heading "Playwright with JavaScript Automation Testing Part01 | Playwright Testing Tutorial" [level=3]:
+    - link "Playwright with JavaScript Automation Testing Part01 | Playwright Testing Tutorial 1 hour, 59 minutes":
+      - /url: /watch?v=UtFEaHxWd7s&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=79&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: Playwright with JavaScript Automation Testing Part01 | Playwright Testing Tutorial
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 3.7K views 2 years ago
+  - button "More actions"
+  - heading "Playwright with JavaScript Automation Testing Part02 | Playwright Testing Tutorial" [level=3]:
+    - link "Playwright with JavaScript Automation Testing Part02 | Playwright Testing Tutorial 2 hours, 29 minutes":
+      - /url: /watch?v=Y10Yrtt1j6I&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=80&pp=iAQB0gcJCaMLAYcqIYzv
+      - text: Playwright with JavaScript Automation Testing Part02 | Playwright Testing Tutorial
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.6K views 2 years ago
+  - button "More actions"
+  - heading "Playwright with JavaScript Automation Testing Part03 | Playwright Testing Tutorial" [level=3]:
+    - link "Playwright with JavaScript Automation Testing Part03 | Playwright Testing Tutorial 52 minutes":
+      - /url: /watch?v=g-NwDhipEOY&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=81&pp=iAQB
+      - text: Playwright with JavaScript Automation Testing Part03 | Playwright Testing Tutorial
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.1K views 2 years ago
+  - button "More actions"
+  - heading "Playwright with JavaScript Automation Testing Part04 | Playwright Testing Tutorial" [level=3]:
+    - link "Playwright with JavaScript Automation Testing Part04 | Playwright Testing Tutorial 1 hour, 33 minutes":
+      - /url: /watch?v=6uiW4WHh69A&list=PLUeDIlio4THEgPRVJRqZRS8uw8hhVNQCM&index=82&pp=iAQB
+      - text: Playwright with JavaScript Automation Testing Part04 | Playwright Testing Tutorial
+  - group:
+    - link "Testers Talk":
+      - /url: /@testerstalk
+  - group: 1.9K views 2 years ago
+  - button "More actions"
+```
+
+# Test source
+
+```ts
+  1  | // import playwright module
+  2  | import { test, expect } from '@playwright/test'
+  3  | 
+  4  | test.describe('SmokeTesting', () => {
+  5  |     // write a test 
+  6  |     test('Test 1', async ({ page }) => {
+  7  |         console.log('Test execution started...')
+  8  | 
+  9  |         // go to url
+  10 |         await page.goto('https://www.google.com/');
+  11 | 
+  12 |         // search for a keywords
+  13 |         await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testers talk');
+  14 |         await page.getByRole('combobox', { name: 'Search' }).press('Enter');
+  15 | 
+  16 |         // click on the playlists
+  17 |         await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click()
+  18 |         //await page.waitForLoadState('networkidle');
+  19 | 
+  20 |         //Validate web page title
+  21 |         await expect(page.getByRole('link', { name: '#1 Playwright Tutorial Full' })).toBeVisible();
+  22 |     });
+  23 | 
+  24 | });
+  25 | 
+  26 | test.describe('Regressiontesting', () => {
+  27 |     // write a test
+  28 |     test('Test 2', async ({ page }) => {
+  29 |         console.log('Test execution started...')
+  30 | 
+  31 |         // go to url
+  32 |         await page.goto('https://www.google.com/');
+  33 | 
+  34 |         // search for a keywords
+  35 |         await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testers talk');
+  36 |         await page.getByRole('combobox', { name: 'Search' }).press('Enter');
+  37 | 
+  38 |         // click on the playlists
+  39 |         await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click()
+  40 |         //await page.waitForLoadState('networkidle');
+  41 | 
+  42 |         //Validate web page title
+  43 |         await expect(page.getByRole('link', { name: '#1 Playwright Tutorial Full' })).toBeVisible();
+  44 |     });
+  45 | 
+  46 |     // write a test
+  47 |     test('Test 3', async ({ page }) => {
+  48 |         console.log('Test execution started...')
+  49 | 
+  50 |         // go to url
+  51 |         await page.goto('https://www.google.com/');
+  52 | 
+  53 |         // search for a keywords
+  54 |         await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testers talk');
+  55 |         await page.getByRole('combobox', { name: 'Search' }).press('Enter');
+  56 | 
+  57 |         // click on the playlists
+  58 |         await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click()
+  59 |         //await page.waitForLoadState('networkidle');
+  60 | 
+  61 |         //Validate web page title
+  62 |         await expect(page.getByRole('link', { name: '#1 Playwright Tutorial Full' })).toBeVisible();
+  63 |     });
+  64 | 
+  65 | 
+  66 |     // write a test
+  67 |     test('Test 4', async ({ page }) => {
+  68 |         console.log('Test execution started...')
+  69 | 
+  70 |         // go to url
+  71 |         await page.goto('https://www.google.com/');
+  72 | 
+  73 |         // search for a keywords
+  74 |         await page.getByRole('combobox', { name: 'Search' }).fill('playwright by testers talk');
+  75 |         await page.getByRole('combobox', { name: 'Search' }).press('Enter');
+  76 | 
+  77 |         // click on the playlists
+  78 |         await page.getByRole('link', { name: 'Playwright by Testers Talk' }).first().click()
+  79 |         //await page.waitForLoadState('networkidle');
+  80 | 
+  81 |         //Validate web page title
+> 82 |         await expect(page.getByRole('link', { name: '#1 Playwright Tutorial Full type  ' })).toBeVisible();
+     |                                                                                              ^ Error: expect(locator).toBeVisible() failed
+  83 |     });
+  84 | 
+  85 | });
+  86 | 
+  87 | 
+  88 | 
+```
