@@ -15,7 +15,8 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.3",
-    "concurrently": "^10.0.3"
+    "allure-playwright": "^3.10.2",
+    "concurrently": "^9.2.4"
   },
   "dependencies": {
     "2captcha-nodejs": "^0.0.3",
