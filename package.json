@@ -21,6 +21,7 @@
   "dependencies": {
     "2captcha-nodejs": "^0.0.3",
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
   }
 }
