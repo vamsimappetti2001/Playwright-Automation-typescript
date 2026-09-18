@@ -7,7 +7,7 @@ test('test', async ({ page }) => {
     await page.getByRole('link', { name: 'Sign in' }).click();
 
   });
-  
+
   await test.step('Enter username& Password', async () => {
     await page.getByRole('textbox', { name: 'Username or email address' }).click();
     await page.getByRole('textbox', { name: 'Username or email address' }).fill('vandyvamsi');
@@ -21,12 +21,12 @@ test('test', async ({ page }) => {
 
   });
 
-   await test.step('validate the error mesaage', async () => {
+  await test.step('validate the error mesaage', async () => {
     await expect(page.getByRole('alert')).toContainText('Incorrect username or password.');
 
   });
-  
-  
- 
-  
+
+
+
+
 });
