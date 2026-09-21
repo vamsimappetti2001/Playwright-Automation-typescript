@@ -18,7 +18,6 @@ export default defineConfig({
   use: {
     trace: 'on',
     headless: false,
-    slowMo: 1000,
     launchOptions: {
       slowMo: 1000,
     },
